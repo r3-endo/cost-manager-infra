@@ -37,7 +37,7 @@ jobs:
           terraform_version: 1.4.4
 
       - name: Check format
-        run: terraform fmt -check -recursive
+        run: terraform fmt -diff=true -check -recursive
 
       - name: Init
         run: terraform init -upgrade -no-color

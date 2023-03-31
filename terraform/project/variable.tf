@@ -4,7 +4,7 @@ variable "aws_region" {}
 variable "tags" {
   type = map(string)
   default = {
-    system = "cost-manager"
+    system  = "cost-manager"
     project = "cost-manager"
   }
 }
