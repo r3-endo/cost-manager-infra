@@ -47,7 +47,3 @@ jobs:
 
       - name: Plan
         run: terraform plan -input=false
-
-      - name: Apply
-        if: ${{ github.event.inputs.refresh_only == 'false' }}
-        run: terraform -chdir=${{ github.event.inputs.stack }} apply -no-color -auto-approve
