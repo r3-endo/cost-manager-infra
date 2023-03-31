@@ -35,10 +35,10 @@ jobs:
         run: terraform fmt -check -recursive
 
       - name: Init
-        run: terraform -chdir=${{ matrix.path }} init -upgrade -no-color
+        run: terraform init -upgrade -no-color
 
       - name: Check validate
-        run: terraform -chdir=${{ matrix.path }} validate
+        run: terraform validate
 
       - name: Plan
-        run: terraform -chdir=${{ matrix.path }} plan -no-color -input=false
+        run: terraform plan -no-color -input=false
